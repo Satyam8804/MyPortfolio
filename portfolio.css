@@ -75,7 +75,7 @@ nav ul li a.active{
     left: 0;
     background-color: #242f3f;
     display:flex;
-    z-index: 2;
+    z-index: 4;
     justify-content: center;
     align-items: center;
   }
@@ -154,7 +154,6 @@ li a:hover{
     display: flex;
     padding-top: 10rem;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 1rem;
     width: 100%;
@@ -189,6 +188,8 @@ color: #333333f5;
     background: transparent;
 }
 img{
+    filter: blur(30px);
+    /* opacity: 50%; */
     margin: 2em;
     height: 600px;
     background: transparent;
@@ -196,7 +197,7 @@ img{
 }
 .detail{
     text-align: left;
-    width: 50%;
+    width: 100%;
     padding-left: 2em;
     padding-top: 10em;
     background: transparent;
@@ -210,19 +211,29 @@ img{
 }
 #download{
     padding: 5px;
-    border: none;
-    margin-top: 2em;
     box-shadow: 5px 5px 10px gray;
     border-radius: 5px;
-    margin-top: 15rem;
+    margin-top: 5rem;
     height: 45px;
     width: 150px;
     background-color:#fff;
     color: #333333f5;
     border: 3px inset hotpink;
 }
-span{
+.detail2{
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: transparent;
+}
+.detail2 span{
+    display: block;
     background-color: transparent;
+}
+.btn{
+    width: 100%;
+    background-color: transparent;
+    padding: 0;
 }
 #download:hover{
     cursor: pointer;
@@ -234,18 +245,22 @@ span{
 }
 #eng{
     color: hotpink;
+    text-align: left;
 }
 
 /* Education */
 .container2{
     position: relative;
     color: #fff;
-    padding: 5rem;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 5rem;
+}
+#skills>*{
+    background: transparent;
 }
 .main_title{
     display: flex;
@@ -254,44 +269,111 @@ span{
     background: transparent;
 
 }
+.main_title>*{
+    background: transparent;
+}
 .sub_title{
     color: gray;
 }
 .skills{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 3rem;
-    flex-wrap: wrap;
     width: 100%;
-    background: transparent;
-    line-height: 0rem;
+    background: inherit;
 }
 .skill_title{
     display: flex;
-    background: transparent;
-
-    flex-direction: column;
-    gap: 1rem;
+      flex-direction:column ;
+      justify-content: space-evenly;
+        flex: 1;
+        padding: 1rem;
+      gap: 1rem;
+      align-content: center;
+      background: transparent;
+   
 }
+.skill_title>*{
+    background: transparent;
+}
+.title{
+    align-self: center;
+    width: fit-content;
+    background: transparent;
+    border-bottom: 3px solid #fff;
+}
+
 i{
     color: #fff; 
     font-size: 3rem;
 }
 .progress{
-    flex: 1;
-    min-width: 600px;
-    max-height: 1.5rem;
-    
+    width:100%;
+    max-height: 1rem;
 }
 .progress-bar{
     width: 100%;
-    /* height: 1rem; */
 }
 .title{
     font-size: 4rem;
    color:  rgb(10, 157, 254);
    font-weight:bolder;
+}
+
+/* aboutme */
+.aboutMe{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 10rem 10rem 10rem;
+    gap: 6rem;
+    
+}
+.about_title span{
+border-bottom: 3px inset #fff;
+color: rgb(10, 157, 254);
+font-weight: bold;
+font-size: 4rem;
+background: transparent;
+font-family: 'IBM Plex Sans', sans-serif;
+}
+.about_content{
+display: flex;
+flex-direction: row;
+gap: 5rem;
+background: transparent;
+
+}
+.about_img{
+width: fit-content;
+height: fit-content;
+background-color: #fff;
+box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.635),
+-5px -5px 5px rgba(128, 128, 128, 0.635);
+transform:rotate(-10deg);
+}
+.about_img img{
+height: 150px;
+margin: 15px;
+width: 250px;
+}
+.about_text{
+    text-align: center;
+    background-color: transparent;
+    color: gray;
+}
+.about_title{
+    background: transparent;
+    color: #fff;
+display: flex;
+flex-direction: row;
+}
+.about_title img{
+width: 200px;
 }
 
 
@@ -337,4 +419,62 @@ i{
     nav .menu-btn i{
         display: block;
     }
+
+    .container1{
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+    }
+    .connect{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .details{
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        flex-direction: row;
+    }
+    .image{
+        display: flex;
+        top: 80px;
+        position:relative;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        padding: 0;
+        width: 100%;
+    }
+    .image img{
+        margin: 0;
+        width: 60%;
+        align-self: center;
+    }
+    .aboutMe{
+        flex-direction: column;
+    }
+   .about_content{
+    flex-direction: column;
+   }
+   #eng{
+    margin: 0;
+   }
+   .skills{
+    flex-direction: column;
+    flex-wrap: wrap;
+
+   }
+   .skill_title{
+    width: 100%;
+   }
+  .progress{
+    width: 100%;
+  }
+
+    
+
 }
