@@ -383,7 +383,6 @@ width: 200px;
 .about_table{
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     padding: 3rem;
     box-shadow: 5px 5px 5px #222;
@@ -519,7 +518,13 @@ width: 200px;
   }
 .about_table{
     flex-wrap: wrap;
+
+    padding: 3rem 0 3rem 0;
+    box-shadow: -5px 0 5px #222;
 }
-    
+    .aboutMe{
+        padding-right:0;
+        padding-left: 0;
+    }
 
 }
