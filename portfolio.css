@@ -86,11 +86,6 @@ nav ul li a.active{
     width: 30px;
     height: 30px;
     position: relative;
-<<<<<<< HEAD
-    /* top: 50%;                       ****** <- Remove this line ******** */
-=======
-   
->>>>>>> a78dccdf5b9fcf512c515fa6ea24e71e508ed493
     border: 4px solid #Fff;
     animation: loader 2s infinite ease;
   }
@@ -201,6 +196,9 @@ img{
     background: transparent;
     filter: drop-shadow(5px 5px 5px #222);
 }
+.aboutMe{
+    justify-content: center;
+}
 .detail{
     text-align: left;
     width: 100%;
@@ -280,6 +278,7 @@ img{
 }
 .sub_title{
     color: gray;
+    font-size: 2rem;
 }
 .skills{
     display: flex;
@@ -381,6 +380,38 @@ flex-direction: row;
 .about_title img{
 width: 200px;
 }
+.about_table{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem;
+    box-shadow: 5px 5px 5px #222;
+    background: #333333f5;
+}
+
+.right_table{
+    background: transparent !important ;
+}
+.about_details{
+    display: flex;
+    word-wrap: break-word;
+    flex-direction: column;
+    background-color: transparent !important;
+    font-size: 2rem;
+    gap: 5rem;
+    color: gray;
+}
+
+.left_table{
+    background-color: transparent !important;
+}
+#about_table tr td{
+    background-color: transparent !important;
+}
+#about_table tr{
+    background: transparent !important;
+}
+
 
 
 /* Media query */
@@ -425,7 +456,7 @@ width: 200px;
     nav .menu-btn i{
         display: block;
     }
-<<<<<<< HEAD
+
 
     .container1{
         flex-direction: column-reverse;
@@ -458,14 +489,18 @@ width: 200px;
     }
     .image img{
         margin: 0;
-        width: 60%;
+        width: 90%;
         align-self: center;
     }
     .aboutMe{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
    .about_content{
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
    }
    #eng{
     margin: 0;
@@ -481,10 +516,15 @@ width: 200px;
   .progress{
     width: 100%;
   }
+.about_table{
+    flex-wrap: wrap;
 
-    
+    padding: 3rem 0 3rem 0;
+    box-shadow: -5px 0 5px #222;
+}
+    .aboutMe{
+        padding-right:0;
+        padding-left: 0;
+    }
 
 }
-=======
-}
->>>>>>> a78dccdf5b9fcf512c515fa6ea24e71e508ed493
