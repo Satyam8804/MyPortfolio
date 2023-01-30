@@ -12,3 +12,29 @@ $(window).on("load",function(){
         });
     },2000)
 })();
+
+// <!-- Initialize Swiper  -->
+
+var swiper = new Swiper('.mySwiper', {
+    
+    slidesPerView:'auto',
+    spaceBetween: 50,
+    centeredSlides:true,
+    grabCursor:true,
+    loop: true,
+    observer:true,
+    observerParents:true,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    // coverflowEffect:{
+    //     rotate:0,
+    //     stretch:0,
+    //     depth:100,
+    //     modifier:1,
+    //     // slideshadow:true
+    // },
+    
+  });
+
