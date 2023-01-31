@@ -1,5 +1,5 @@
 $(window).on("load",function(){
-    
+
     $(".loader-wrapper").fadeOut("slow");
 });
 
@@ -19,7 +19,7 @@ $(window).on("load",function(){
 var swiper = new Swiper('.mySwiper', {
     
     slidesPerView:'auto',
-    spaceBetween: 50,
+    spaceBetween: 40,
     centeredSlides:true,
     grabCursor:true,
     loop: true,

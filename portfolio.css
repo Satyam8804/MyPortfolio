@@ -328,13 +328,14 @@ i{
 
 /* aboutme */
 .aboutMe{
-
+    border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 10rem 10rem 10rem;
+    /* padding: 1rem 10rem 10rem 10rem; */
     gap: 6rem;
+    padding-bottom:3rem ;
     
 }
 .about_title span{
@@ -390,11 +391,19 @@ width: 200px;
 
 .right_table{
     background: transparent !important ;
-    display: flex;
-    flex-wrap: wrap;
     text-align: left;
+}
+.table td{
+    color: #fff;
+    border:none;
+    text-align: left;
+}
+.table{
+    background: transparent;
+    padding: 1rem;
 
 }
+
 .about_details{
     display: flex;
     word-wrap: break-word;
@@ -407,8 +416,6 @@ width: 200px;
 
 .left_table{
     background-color: transparent !important;
-    display: flex;
-    flex-wrap: wrap;
     text-align: left;
 
 }
@@ -449,6 +456,7 @@ width: 200px;
     height: 500px;
     background: transparent;
     width: 100%;
+    overflow: hidden;
     padding-top:5rem ;
     padding-bottom:8rem ;
 }
@@ -460,15 +468,15 @@ width: 200px;
    align-items: center;
     background: #333333f5;
     width: 100%;
-    height: auto;
+    height: 500px;
      /* display: flex;
     align-items: center;
     justify-content: center;  */
 }
 .swiper-slide{
-
+    align-items: center;
     background: transparent;
-    width: 65%;
+    width: 60%;
     height: 100%;
     border-radius: 7px;
 }
@@ -480,7 +488,7 @@ width: 200px;
 }
 .swiper-slide-active{
     transform: scaleY(1.25);
-    transition: .6;
+    transition:.5s;
     z-index: 1;
 }
 .swiper-pagination{
@@ -577,9 +585,7 @@ width: 200px;
     justify-content: center;
     align-items: center;
    }
-   #eng{
-    margin: 0;
-   }
+
    .skills{
     flex-direction: column;
     flex-wrap: wrap;
@@ -594,32 +600,28 @@ width: 200px;
 .about_table{
     flex-wrap: wrap;
     word-wrap:break-word;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content:center;
+    /* gap: 2rem; */
     padding: 3rem 0 3rem 0;
     box-shadow: -5px 0 5px #222;
 }
     .aboutMe{
-        padding-right:0;
-        padding-left: 0;
+        width: 100%;
     }
     .right_table{
         width: 100%;
+        /* padding: 1rem; */
         justify-content: center;
         word-wrap: break-word;
     }
-    .right_table tr td{
-        text-align: center;
-    }
+
     .left_table{
         width: 100%;
-        word-wrap: break-word;
-    }
-    .left_table>*{
+        /* padding-left: 1rem; */
         word-wrap: break-word;
     }
     .about_text{
-        padding: 0 1rem o 1rem;
+        padding:2rem;
         word-wrap: break-word;
     }
     /* swipper */
@@ -630,6 +632,13 @@ width: 200px;
     }
     .swiper-slide-active{
         transform: scaleY(1.7);
+    }
+    .swiper-slide{
+        width: 65%;
+
+    }
+    #table tr td:nth-child(2){
+        font-size:;
     }
 
 
