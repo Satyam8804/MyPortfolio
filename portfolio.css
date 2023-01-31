@@ -73,8 +73,8 @@ nav ul li a.active{
     position: absolute;
     top: 0;
     left: 0;
-        z-index: 2;
-
+    z-index: 2;
+    overflow: hidden;
     background-color: #242f3f;
     display:flex;
     z-index: 4;
@@ -390,6 +390,10 @@ width: 200px;
 
 .right_table{
     background: transparent !important ;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+
 }
 .about_details{
     display: flex;
@@ -403,6 +407,10 @@ width: 200px;
 
 .left_table{
     background-color: transparent !important;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+
 }
 #about_table tr td{
     background-color: transparent !important;
@@ -416,6 +424,7 @@ width: 200px;
 /* swipper */
 .projects1{
     /* background-color: transparent; */
+    margin: 0;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -452,14 +461,14 @@ width: 200px;
     background: #333333f5;
     width: 100%;
     height: auto;
-     display: flex;
+     /* display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;  */
 }
 .swiper-slide{
 
     background: transparent;
-    width: 60%;
+    width: 65%;
     height: 100%;
     border-radius: 7px;
 }
