@@ -19,7 +19,7 @@ $(window).on("load",function(){
 var swiper = new Swiper('.mySwiper', {
     
     slidesPerView:'auto',
-    spaceBetween: 40,
+    spaceBetween: 50,
     centeredSlides:true,
     grabCursor:true,
     loop: true,
