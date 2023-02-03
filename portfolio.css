@@ -83,7 +83,6 @@ nav ul li a .text.active1{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
     overflow: hidden;
     background-color: #242f3f;
     display:flex;
@@ -557,6 +556,13 @@ width: 200px;
     align-self: center;
     letter-spacing: 2px;
 }
+.swiper-button-next,.swiper-button-prev{
+    color: rgb(0, 251, 255);
+    filter: drop-shadow(2px 2px 5px #14ffd0) ;
+}
+.swiper-slide-next,.swiper-slide-prev{
+    filter: blur(5px);
+}
 
 .description{
     background-color: transparent;
@@ -797,14 +803,16 @@ width: 200px;
     flex-wrap: wrap;
     word-wrap:break-word;
     justify-content:center;
+    align-items: center;
     /* gap: 2rem; */
-    padding: 3rem 0 3rem 0;
+    padding: 3rem;
     box-shadow: -5px 0 5px #222;
 }
     .aboutMe{
         width: 100%;
     }
     .right_table{
+        
         width: 100%;
         /* padding: 1rem; */
         justify-content: center;
@@ -819,6 +827,10 @@ width: 200px;
     .about_text{
         padding:2rem;
         word-wrap: break-word;
+    }
+    table tr td{
+        padding: 10px;
+        font-size: medium;
     }
     /* swipper */
     .mySwiper{
