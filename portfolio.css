@@ -833,6 +833,9 @@ width: 200px;
         width: 65%;
 
     }
+    .swiper-button-next,.swiper-button-prev{
+        display: none;
+    }
    
 
 
