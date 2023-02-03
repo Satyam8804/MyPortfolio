@@ -590,7 +590,7 @@ width: 200px;
         align-items: center;
         justify-content: center;
         border-radius: 10px 10px 0 0;
-        box-shadow: 10px 0 20px #242f3f;
+        box-shadow: 10px 0 20px #667995;
     }
     nav ul{
         width: 100%;
@@ -645,13 +645,13 @@ width: 200px;
     }
     nav ul li.active a .icon{
         transform: translateY(-45px);
-        color:#2196f3 ;
+        color:rgb(0, 251, 255) ;
     }
 
     nav ul li a .text{
         /* z-index: 1; */
         position: absolute;
-        background-color: #2196f3;
+        background-color: rgb(0, 251, 255);
         color: #fff;
         
         padding: 2px 7px;
