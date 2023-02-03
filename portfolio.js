@@ -14,6 +14,21 @@ $(window).on("load",function(){
     },2000)
 })();
 
+
+//NavBar
+
+const list = document.querySelectorAll('.list');
+function activeLink() {
+    list.forEach((item)=>
+    item.classList.remove('active'));
+    this.classList.add('active')
+}
+
+list.forEach((item)=>
+item.addEventListener('click' ,activeLink));
+
+
+
 // <!-- Initialize Swiper  -->
 
 var swiper = new Swiper('.mySwiper', {
@@ -29,13 +44,18 @@ var swiper = new Swiper('.mySwiper', {
     el: ".swiper-pagination",
     clickable: true,
     },
-    // coverflowEffect:{
-    //     rotate:0,
-    //     stretch:0,
-    //     depth:100,
-    //     modifier:1,
-    //     // slideshadow:true
-    // },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    breakpoints: {
+        948: {
+           slidesPerView: 'auto',
+           spaceBetween: 150,
+        }
+        
+     }
     
   });
 
+ 
