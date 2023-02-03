@@ -173,7 +173,7 @@ li a .text:hover{
     padding-top: 10rem;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 3rem;
     width: 100%;
 
@@ -202,20 +202,69 @@ color: #333333f5;
     filter: drop-shadow(2px 2px 5px #fff);
 
 }
-.image{
+/* .image{
     position: relative;
     background: transparent;
     height: fit-content;
-    width: fit-content;
+    width: max-content;
     padding: 0;
-}
+}*/
+
 img{
     filter: blur(30px);
     margin: 2em;
     height: 500px;
+    width: 400px;
     background: transparent;
     filter: drop-shadow(5px 5px 5px rgb(10, 10, 10))drop-shadow(-5px -5px 5px rgb(7, 7, 7));
+} 
+
+/* image  */
+
+.card{
+    position: relative;
+    background: transparent;
+    width: max-content;
+    transition: 0.5s;
+    height: 500px;
+    align-items: center;
+    width: 400px;
+    background: transparent !important;
+
 }
+.card .lines{
+position: relative;
+background: transparent;
+inset: 0;
+overflow: hidden;
+}
+.card .lines::before{
+    content: ' ';
+    position: absolute;
+/* transform: translate(-50%,-50%); */
+    top: 50%;
+    left: 50%;
+    height: 120px;
+    width: 600px;
+    background: linear-gradient(transparent,rgb(0, 251, 255),rgb(0, 251, 255),rgb(0, 251, 255),transparent);
+    animation: animate 4s linear infinite;
+}
+.card .lines::after{
+    position: absolute;
+    inset: 3px;
+    background: transparent;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+
+    }
+}
+
 .aboutMe{
     justify-content: center;
 }
@@ -453,6 +502,9 @@ width: 200px;
 #about_table tr{
     background: transparent !important;
 }
+
+
+
 
 
 
@@ -759,24 +811,27 @@ width: 200px;
     .detail{
         padding-top: 1rem;
     }
-    .image{
+    .card{
         display: flex;
         position:relative;
         justify-content: center;
         align-items: center;
-        height: 400px;
-        top: 0;
-        padding: 0;
+        height: 350px;
         width: 100%;
-        padding-bottom: 3rem;
+        /* padding: .5rem; */
+        /* padding-bottom: 3rem; */
     }
-    .image img{
+    .card .lines img{
         margin: 0;
         height: 100%;
-        width: 300px;
-        
+        width:300px;
         align-self: center;
     }
+.card .lines{
+    height: 100%;
+    width: fit-content;
+    padding: 1rem;
+}
     .aboutMe{
         flex-direction: column;
         justify-content: center;
