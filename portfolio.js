@@ -1,3 +1,9 @@
+new kursor({
+	type: 1,
+   color:"rgba(0, 251, 255,0.2)",
+   
+})
+
 $(window).on("load",function(){
 
     $(".loader-wrapper").fadeOut("slow");
@@ -25,8 +31,35 @@ function activeLink() {
 }
 
 list.forEach((item)=>
-item.addEventListener('click' ,activeLink));
+item.addEventListener("click" ,activeLink));
 
+// contact  form
+
+
+
+function showForm() {
+   document.getElementsByClassName('contact-form')[0].style.display="block";
+   document.getElementsByClassName('contact-details')[0].style.display="none";
+}
+
+//  email service 
+
+
+
+const btn = document.getElementById('button');
+function sendEmail() {
+Email.send({
+    Host : "smpt.gmail.com",
+    Username : "satyam8804378323@gmail.com",
+    Password : "@Satyam6207",
+    To : 'satyam347.sk@gmail.com',
+    From : document.getElementById(email_id).value,
+    Subject : "New Contact Form Enquiry",
+    Body : document.getElementById('message').value
+}).then(
+  message => alert(message)
+);
+}
 
 
 // <!-- Initialize Swiper  -->
@@ -59,4 +92,3 @@ var swiper = new Swiper('.mySwiper', {
     
   });
 
- 

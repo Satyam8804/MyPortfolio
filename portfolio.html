@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+   
   
      <title>Satyam Kumar</title>
 </head>
@@ -18,7 +19,7 @@
      <div class="content" style="display: none;">
         <img src="https://picsum.photos/300/300/?random" />
       </div>
-    <div class="loader-wrapper">
+    <div class="loader-wrapper" style="overflow: hidden;">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
     <nav>
@@ -52,7 +53,7 @@
                 <span class="icon"><ion-icon name="bag-check-outline"></ion-icon></span>
             </a> </li>
             <li class="list">
-              <a href="#">
+              <a href="#cont">
                 <span class="text">Contacts</span>
               <span class="icon"><ion-icon name="call-outline" ></ion-icon></span>
               </a>
@@ -74,7 +75,7 @@
             <span id="eng" class="color"  style="font-size: 8rem;"></span>
           </div>
           <div class="btn">
-            <button class="btn btn-large fa fa-download" title="Click to download CV" id="download" type="submit" onclick="window.open('resume.pdf')" style="font-size: small;">&nbsp&nbsp Download CV</button>
+            <button class="btn btn-large fa fa-download button" title="Click to download CV" id="download" type="submit" onclick="window.open('resume.pdf')" style="font-size: small;">&nbsp&nbsp Download CV</button>
           </div>
         </div>
         
@@ -89,7 +90,9 @@
 
     <div class="aboutMe border-0 pt-5" id="aboutSection">
       <div class="about_title">
-      <span>About Me</span>
+      <span>About Me
+        <div class="bb"></div>
+      </span>
   </div>
   <div class="about_content">
       <div class="about_img ">
@@ -147,7 +150,9 @@
 
     <div class="container2 border-0 pb-5 pt-5" id="skills">
         <div class="main_title border-0">
-            <span class="title">Skills</span>
+            <span class="title">Skills
+              <div class="bb"></div>
+            </span>
             <span class="sub_title">A level-headed person with adaptive interpersonal and technical skills. I build websites and provide technical support.</span>
         </div>
         <!-- skill 1-->
@@ -227,7 +232,9 @@
 
   <!-- projectsdone start-->
 <div class="projects1" id="project">
-         <span class="project-title">Projects</span>
+         <span class="project-title title">Projects
+          <div class="bb"></div>
+         </span>
 <!-- <div class="project-slider"> -->
 
  <!-- Swiper -->
@@ -312,10 +319,87 @@
 </div>
 </div>
 
+<!-- Contacts section start -->
+
+<div class="contacts" id="cont">
+  <span class="title">Contacts
+    <div class="bb"></div>
+   </span>
+   <div class="contact-box">
+  <div class="remainder">
+      <h2>Contact Me</h2>
+      <span style="text-align: center;"><ion-icon name="time-outline"></ion-icon>&nbsp&nbsp&nbsp&nbsp&nbspIt Will Take Only Few seconds to Contact</span>
+      <button class="btn btn-large show button" title="contact" id="download" onclick="showForm()" style="font-size: medium; font-weight: 700;">Message Me</button>
+  </div>
+  <div class="contact-form">
+      <form action=""  style="width: 100%;" id="form" onsubmit="sendMail()">
+        <table id="contact-table1">
+          <tr>
+            <td>Name </td>
+            <td><input id="User_name" type="text"></td>
+          </tr>
+          <tr>
+            <td>
+            Email 
+          </td>
+          <td><input type="email" name="mail" id="email_id"></td>
+        
+        </tr>
+          <tr>
+            <td>Message </td>
+            <td>
+              <Textarea placeholder="Enter your Message..." class="form-control" id="message"></Textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><button class="btn btn-large button" type="submit" id="button" style="font-size: medium; font-weight: 700; margin: 0;">Send</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+
+  </div>
+  <div class="contact-details">
+    <span style="color: gray;">Feel Free To Contact Me Anytime !
+    <hr>
+    </span>
+    <table id="contact-table">
+      <tr>
+        <td><ion-icon name="person-outline" class="cont-icon"></ion-icon>Name</td>
+        <td>Satyam Kumar</td>
+      </tr>
+      <tr>
+        <td><ion-icon name="location-outline" class="cont-icon"></ion-icon>Location</td>
+        <td>Patna,Bihar ,800020</td>
+      </tr>
+      <tr>
+        <td><ion-icon name="call-outline" class="cont-icon"></ion-icon>Call Me</td>
+        <td>(+91)-6207621814</td>
+      </tr>
+      <tr>
+        <td><ion-icon name="call-outline" class="cont-icon"></ion-icon>Email Me</td>
+        <td>Satyam8804378323@gmail.com</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<footer>
+  
+</footer>
+</div>
+
+
+<!-- contact section end  -->
 
   <!-- projects end  -->
 
     <!-- Script section -->
+   <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/kursor"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
