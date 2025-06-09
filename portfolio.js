@@ -48,6 +48,7 @@ function showForm() {
 
 const btn = document.getElementById('button');
 function sendEmail() {
+    e.preventDefault();
 Email.send({
     Host : "smpt.gmail.com",
     Username : "satyam8804378323@gmail.com",
